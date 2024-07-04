@@ -2,7 +2,7 @@
  * Eduport- LMS, Education and Course Theme
  *
  * @author Webestica (https://www.webestica.com/)
- * @version 1.4.1
+ * @version 1.4.2
  **/
 
 
@@ -35,6 +35,7 @@ Table Of Content
 24 STICKY ELEMENT
 24 OVERLAY SCROLLBARS
 26 FLATPICKER
+27 PURECOUNTER
 ====================== */
 
 "use strict";
@@ -112,7 +113,8 @@ var e = {
             e.pricing(),
             e.stickyElement(),
             e.overlayScrollbars(),
-            e.flatPicker();
+            e.flatPicker(),
+            e.pCounter()
 
     },
     isVariableDefined: function(el) {
@@ -1090,6 +1092,16 @@ var e = {
         }
     },
     // END: Flatpicker
+
+    // START: 27 Purecounter
+    /* @required https://github.com/srexi/purecounterjs */
+    pCounter: function() {
+        var pCounter = e.select('.purecounter');
+        if (e.isVariableDefined(pCounter)) {
+            new PureCounter();
+        }
+    },
+    // END: Purecounter
 
 };
 e.init();
